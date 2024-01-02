@@ -59,7 +59,7 @@ public class ToolStore extends NormalLoc {
 
         if(selectWeaponID !=0 ){
 
-        Weapon selectedWeapon = Weapon.getWeaponObjById(selectWeaponID);
+        Weapon selectedWeapon = Weapon.getWeaponObjByID(selectWeaponID);
 
         if (selectedWeapon != null) {
             if (selectedWeapon.getPrice() > this.getPlayer().getMoney()) {
@@ -109,10 +109,8 @@ public class ToolStore extends NormalLoc {
                 this.getPlayer().setMoney(balance);
                 System.out.println(" * Kalan Paran : " + this.getPlayer().getMoney());
                 System.out.println(" * Önceki Silahın : ==> " + this.getPlayer().getInventory().getWeapon().getName());
-                ;
                 this.getPlayer().getInventory().setArmor(selectedArmor);
                 System.out.println(" * Yeni Silahın :   ==> " + this.getPlayer().getInventory().getWeapon().getName());
-                ;
 
             }
         }

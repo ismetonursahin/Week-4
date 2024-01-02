@@ -19,7 +19,7 @@ public class Weapon  {
         this.price = price;
     }
 
-    public static Weapon getWeaponObjById(int id){
+    public static Weapon getWeaponObjByID(int id){
 
         for (Weapon w : Weapon.weapons()){
             if(w.getID() == id){

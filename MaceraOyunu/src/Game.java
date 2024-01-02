@@ -21,10 +21,10 @@ public class Game {
             System.out.println("\n   ==> Bölgeler <== \n     ");
             System.out.println("1 - Güvenli Ev --> Güvenli Bölge, Düşman Yok, Can Yenilenir. ");
             System.out.println("2 - Envanter Dükkanı  -->  Silah veya Zırh Alabilirsin");
-            System.out.println("3 - Mağara  --> <- Ödül: YEMEK ->  Mağaraya Gir. Zombilere Dikkat Et!");
-            System.out.println("4 - Orman   --> <- Ödül: ODUN  ->  Ormana Git. Vampirler Çok Tehlikeli");
-            System.out.println("5 - Nehir   --> <- Ödül: SU    ->  Nehire Git. Ayılar Seni Bekliyor.");
-            System.out.println("6 - Maden   --> <- Ödül: ");
+            System.out.println("3 - Mağara  --> <- Ödül: YEMEK  ->  Mağaraya Gir. Zombilere Dikkat Et!");
+            System.out.println("4 - Orman   --> <- Ödül: ODUN   ->  Ormana Git. Vampirler Çok Tehlikeli");
+            System.out.println("5 - Nehir   --> <- Ödül: SU     ->  Nehire Git. Ayılar Seni Bekliyor.");
+            System.out.println("6 - Maden   --> <- Ödül: ŞANS?  ->  Burada Yılanlarla Savaşacksın.");
             System.out.println("0 - Çıkış Yap ==> Oyunu Sonlandır.");
 
             System.out.print("\nGitmek İstediğin Yer : ");
@@ -48,6 +48,8 @@ public class Game {
                 case 5 :
                     location = new River(player);
                     break;
+                case 6 :
+                    location = new Mine(player);
                 default:
                     System.out.println("Geçerli Bir Bölge Gir ! ");;
             }
